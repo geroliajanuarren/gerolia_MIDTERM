@@ -87,7 +87,7 @@
                         </div>
                         <div class="form-group">
                             <label>Civil Status</label>
-                            <select name="civil_status" class="form-control" required>
+                            <select name="civilStatus" class="form-control" required>
                                 <option value="" disabled selected>--Choose--</option>
                                 <option value="Single">Single</option>
                                 <option value="Married">Married</option>
@@ -122,7 +122,7 @@
                         </div>
                         <div class="form-group">
                             <label>Contact Number</label>
-                            <input type="tel" name="contact_number" class="form-control" required>
+                            <input type="tel" name="contactNumber" class="form-control" required>
                         </div>                   
                     </div>
                     <div class="modal-footer">
@@ -171,7 +171,7 @@
                         </div>
                         <div class="form-group">
                             <label>Civil Status</label>
-                            <select name="edit_civil_status" class="form-control" required>
+                            <select name="edit_civilStatus" class="form-control" required>
                                 <option value="" disabled selected>--Choose--</option>
                                 <option value="Single">Single</option>
                                 <option value="Married">Married</option>
@@ -206,7 +206,7 @@
                         </div>
                         <div class="form-group">
                             <label>Contact Number</label>
-                            <input type="tel" name="edit_contact_number" class="form-control" required>
+                            <input type="tel" name="editN" class="form-control" required>
                         </div>                   
                     </div>
                     <div class="modal-footer">
@@ -229,10 +229,10 @@
             var age = $("input[name='age']").val();
             var birthdate = $("input[name='birthdate']").val();
             var gender = $("select[name='gender']").val();
-            var civilStatus = $("select[name='civil_status']").val();
+            var civilStatus = $("select[name='civilStatus']").val();
             var municipality = $("select[name='municipality']").val();
             var address = $("textarea[name='address']").val();
-            var contactNumber = $("input[name='contact_number']").val();
+            var contactNumber = $("input[name=N']").val();
         
             // Append new row to table body with edit and delete actions
             var newRow = "<tr>" + 
@@ -268,10 +268,10 @@
             var age = $("input[name='edit_age']").val();
             var birthdate = $("input[name='edit_birthdate']").val();
             var gender = $("select[name='edit_gender']").val();
-            var civilStatus = $("select[name='edit_civil_status']").val();
+            var civilStatus = $("select[name='edit_civilStatus']").val();
             var address = $("textarea[name='edit_address']").val();
             var municipality = $("select[name='edit_municipality']").val();
-            var contactNumber = $("input[name='edit_contact_number']").val();
+            var contactNumber = $("input[name='editN']").val();
 
             // Retrieve the row to be edited
             var row = $(".edit-active-row");
@@ -307,10 +307,10 @@
             $("input[name='edit_age']").val(cells.eq(2).text());
             $("input[name='edit_birthdate']").val(cells.eq(3).text());
             $("select[name='edit_gender']").val(cells.eq(4).text());
-            $("select[name='edit_civil_status']").val(cells.eq(5).text());
+            $("select[name='edit_civilStatus']").val(cells.eq(5).text());
             $("textarea[name='edit_address']").val(cells.eq(6).text());
             $("select[name='edit_municipality']").val(cells.eq(7).text());
-            $("input[name='edit_contact_number']").val(cells.eq(8).text());
+            $("input[name='editN']").val(cells.eq(8).text());
 
             $("#editEmployeeModal").modal("show");
         });
@@ -358,7 +358,7 @@
                 "</div>" +
                 "<div class='form-group'>" +
                     "<label>Civil Status</label>" +
-                    "<select name='edit_civil_status' class='form-control' required>" +
+                    "<select name='edit_civilStatus' class='form-control' required>" +
                         "<option value='Single'>Single</option>" +
                         "<option value='Married'>Married</option>" +
                         "<option value='Engage'>Engaged</option>" +
@@ -391,7 +391,7 @@
                 "</div>" +
                 "<div class='form-group'>" +
                     "<label>Contact Number</label>" +
-                    "<input type='tel' name='edit_contact_number' class='form-control' value='" + cells[8].textContent + "' required>" +
+                    "<input type='tel' name='editN' class='form-control' value='" + cells[8].textContent + "' required>" +
                 "</div>"
             );
         });
@@ -406,10 +406,10 @@
             var age = $("input[name='edit_age']").val();
             var birthdate = $("input[name='edit_birthdate']").val();
             var gender = $("select[name='edit_gender']").val();
-            var civilStatus = $("select[name='edit_civil_status']").val();
+            var civilStatus = $("select[name='edit_civilStatus']").val();
             var municipality = $("select[name='edit_municipality']").val();
             var address = $("textarea[name='edit_address']").val();
-            var contactNumber = $("input[name='edit_contact_number']").val();
+            var contactNumber = $("input[name='editN']").val();
 
             // Retrieve the row to be edited
             var row = $(this).closest("tr");

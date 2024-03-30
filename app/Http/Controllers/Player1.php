@@ -20,10 +20,10 @@ class Player1 extends Controller
             'age' => $request->input('age'),
             'birthdate' => $request->input('birthdate'),
             'gender' => $request->input('gender'),
-            'civil_status' => $request->input('civil_status'),
+            'civil_status' => $request->input('civilStatus'),
             'municipality' => $request->input('municipality'),
             'address' => $request->input('address'),
-            'contact_number' => $request->input('contact_number'),
+            'contact_number' => $request->input('contactNumber'),
         ];
     
         Employer::create($record);
